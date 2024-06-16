@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="../plugin/plugin-html-multi-slider-response.js"></script>
+    <script src="plugin-html-button-response.js"></script>
+    <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
+    <style>
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+
+    var jsPsych = initJsPsych({
+      default_iti: 250, 
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
+    });
+
+    var instruction = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: '<p>In this experiment, you will see 3 scenes sequentially, each followed by pictures showing a question from an interlocutor, and possible answers from the other interlocutor. For each picture, choose how likely you think it is that the other interlocutor would use different answers. Make sure the likeliness of different answers sums up to 100.</p>',
+      choices: ['Continue']
+    };
+
+    var context1 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: '<p>John and Mary are recruiting for a position as a researcher in a lab. Bob applied for this position and as part of the application process, he had to take an IQ test. Mary has just looked at Bob’s test results and John wants to know how Bob did.</p>',
+      choices: ['Continue']
+    };
+
+    var trial_111 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int70.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_121 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int80.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_131 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int90.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_141 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int100.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_151 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int110.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_161 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int120.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_171 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int130.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_181 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int140.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_191 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int150.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_112 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int70.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_122 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int80.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_132 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int90.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_142 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int100.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_152 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int110.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_162 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int120.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_172 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int130.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_182 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int140.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_192 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/int150.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Mary would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["You are intelligent", "You are brilliant", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trials_s1 = [trial_111, trial_121, trial_131, trial_141, trial_151, trial_161, trial_171, trial_181, trial_191, trial_112, trial_122, trial_132, trial_142, trial_152, trial_162, trial_172, trial_182, trial_192];
+
+    var randomized_s1 = jsPsych.randomization.shuffle(trials_s1);
+
+
+    var context2 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: '<p>Tom and Adam run a grocery store together. Tom is at the supplier’s right now, while Adam is at the store. Tom calls Adam.</p>',
+      choices: ['Continue']
+    };
+
+    var trial_211 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l0.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_221 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l1.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_231 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l2.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_241 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l3.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_251 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l4.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_261 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l5.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_271 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l6.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_281 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l7.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_291 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l8.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_212 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l0.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_222 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l1.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_232 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l2.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_242 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l3.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_252 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l4.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_262 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l5.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_272 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l6.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_282 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l7.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_292 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/l8.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Adam would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 3,
+      force_total: 100,
+      slider_labels: ["Our stock is low", "Our stock is depleted", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trials_s2 = [trial_211, trial_221, trial_231, trial_241, trial_251, trial_261, trial_271, trial_281, trial_291, trial_212, trial_222, trial_232, trial_242, trial_252, trial_262, trial_272, trial_282, trial_292];
+
+    var randomized_s2 = jsPsych.randomization.shuffle(trials_s2);
+
+
+    
+    var context3 = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: '<p>Anna and Lily are planning to go on vacation to an island in June. Anna checked the weather forecast on her phone. Lily wants to know what it said.</p>',
+      choices: ['Continue']
+    };
+
+    var trial_311 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st1.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_321 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st2.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_331 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st3.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_341 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st4.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_351 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st5.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_361 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st6.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_371 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st7.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_381 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st8.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_391 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st9.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_312 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st1.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_322 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st2.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_332 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st3.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_342 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st4.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_352 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st5.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_362 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st6.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_372 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st7.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_382 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st8.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trial_392 = {
+      type: jsPsychHtmlMultiSliderResponse,
+      stimulus: '<img src="pic sentence match/st9.png" style="width:600px; height:250px; margin: 50px auto;">' +
+      '<p>How likely do you think it is that Anna would use these sentences? <br> Make sure that your responses sum up to 100.</p >',
+      num_sliders: 4,
+      force_total: 100,
+      slider_labels: ["It's sometimes sunny", "It's usually sunny", "It's always sunny", "something else"],
+      slider_width: 800,
+      prompt: ''
+    };
+
+    var trials_s3 = [trial_311, trial_321, trial_331, trial_341, trial_351, trial_361, trial_371, trial_381, trial_391, trial_312, trial_322, trial_332, trial_342, trial_352, trial_362, trial_372, trial_382, trial_392];
+
+    var randomized_s3 = jsPsych.randomization.shuffle(trials_s3);
+
+    var timeline = [instruction].concat([context1]).concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3].concat(randomized_s3));
+
+    jsPsych.run(timeline);
+
+
+  </script>
+</html>
