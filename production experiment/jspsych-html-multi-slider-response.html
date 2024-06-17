@@ -5,6 +5,7 @@
     <script src="https://unpkg.com/jspsych@7.3.4"></script>
     <script src="plugin-html-multi-slider-response.js"></script>
     <script src="plugin-html-button-response.js"></script>
+    <script src="plugin-fullscreen.js"></script>
     <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
     <style>
       img {
@@ -27,6 +28,10 @@
       stimulus: '<p>In this experiment, you will see several scenes and answer questions about them. On each slide, you will see a picture and several utterances. Please move the sliders for each utterance to indicate how likely you think it is that the speaker would say this.</p><p>Note: The ratings must add up to 100 and the sliders will automatically snap back if you try to assign more than 100 points.</p>',
       choices: ['Continue']
     };
+
+    var fullscreen = {
+      type: jsPsychFullscreen,
+    }
 
     var context1 = {
       type: jsPsychHtmlButtonResponse,
@@ -655,7 +660,7 @@
 
     var randomized_s3 = jsPsych.randomization.shuffle(trials_s3);
 
-    var timeline = [instruction].concat([context1]).concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3].concat(randomized_s3));
+    var timeline = [instruction].concat([fullscreen]).concat([context1]).concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3].concat(randomized_s3));
 
     jsPsych.run(timeline);
 
