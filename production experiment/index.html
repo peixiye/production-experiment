@@ -6,6 +6,7 @@
     <script src="plugin-html-multi-slider-response.js"></script>
     <script src="plugin-html-button-response.js"></script>
     <script src="plugin-fullscreen.js"></script>
+    <script src="plugin-survey-text.js"></script>
     <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
     <style>
       img {
@@ -660,7 +661,14 @@
 
     var randomized_s3 = jsPsych.randomization.shuffle(trials_s3);
 
-    var timeline = [instruction].concat([fullscreen]).concat([context1]).concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3].concat(randomized_s3));
+    var feedback = {
+      type: jsPsychSurveyText,
+      questions: [
+        {prompt: 'If you encountered any technical difficulties, found anything odd, or if you have any other comments about the experiment that you would like to share with us, please type them in the box below:', rows: 5}
+      ]
+    } 
+
+    var timeline = [instruction].concat([fullscreen]).concat([context1]).concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3].concat(randomized_s3)).concat([feedback]);
 
     jsPsych.run(timeline);
 
