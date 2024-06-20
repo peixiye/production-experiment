@@ -7,6 +7,7 @@
   <script src="https://unpkg.com/jspsych@7.3.4"></script>
   <script src="plugin-html-multi-slider-response.js"></script>
   <script src="plugin-html-button-response.js"></script>
+  <script src="plugin-html-keyboard-response.js"></script>
   <script src="plugin-fullscreen.js"></script>
   <script src="plugin-survey-text.js"></script>
   <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -241,7 +242,19 @@
       ]
     }
 
-    var timeline = [consent1, consent2, instruction, fullscreen, context1].concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3]).concat(randomized_s3).concat([feedback]);
+     const end_of_experiment = {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: '<p>This is the end of the experiment. Thank you for participation.</p><p>Please press the space bar to exit.</p>',
+      trial_duration: null,
+      choices: [' ']
+    };
+
+    const exit_fullscreen = {
+        type: jsPsychFullscreen,
+        fullscreen_mode: false
+    }
+
+    var timeline = [consent1, consent2, instruction, fullscreen, context1].concat(randomized_s1).concat([context2]).concat(randomized_s2).concat([context3]).concat(randomized_s3).concat([feedback]).concat([end_of_experiment, exit_fullscreen]);
 
     jsPsych.run(timeline);
 
